@@ -6,13 +6,13 @@ import day01
 type SolverFn = fn (string) !string
 
 const day01_a_embed = $embed_file('day01/day01_A.txt')
-const day01_b_embed = $embed_file('day01/day01_B.txt')
+
 
 struct Solver {
 	name     string
 	func     SolverFn @[required]
 	data     string
-	solution ?string
+	solution ?string // something i check after 
 }
 
 fn main() {
@@ -21,11 +21,12 @@ fn main() {
 			name: 'Day 01 A'
 			func: day01.solve_a
 			data: day01_a_embed.to_string()
+			solution: "1120"
 		},
 		Solver{
 			name: 'Day 01 B'
 			func: day01.solve_b
-			data: day01_b_embed.to_string()
+			data: day01_a_embed.to_string()
 		},
 	]
 
