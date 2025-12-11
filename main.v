@@ -27,6 +27,7 @@ fn main() {
 			name: 'Day 01 B'
 			func: day01.solve_b
 			data: day01_a_embed.to_string()
+			solution: "6554"
 		},
 	]
 

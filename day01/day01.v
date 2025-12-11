@@ -22,16 +22,24 @@ mut:
 fn (mut d Dial) rotate(dial_code DialCode) {		
     steps := dial_code.power
     dir := int(dial_code.direction)
-	// part B
-	// todo
-    d.password_total += 0
+	next_value := d.value + (steps * dir)
+	
+	// part B	
+    if dial_code.direction == .r {        
+        d.password_total += next_value / dial_size
+    } else {
+        dist_to_next_zero := if d.value == 0 { dial_size } else { d.value }
+        if steps >= dist_to_next_zero {        
+            d.password_total += 1 + (steps - dist_to_next_zero) / dial_size
+        }
+    }
 
-	// part A
-    d.value += steps * dir
-    d.value = ((d.value % dial_size) + dial_size) % dial_size
+	// part A    
+	
+    d.value = ((next_value % dial_size) + dial_size) % dial_size
     if d.value == 0 {
         d.password++
-    }
+    }	
 }
 
 fn create_dial_code(code string) !DialCode {

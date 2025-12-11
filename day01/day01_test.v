@@ -10,5 +10,5 @@ fn test_solve_a() {
 
 fn test_solve_b() {
     result := solve_b(data_a) or { panic(err) }    
-    assert result == "10"
+    assert result == "6"
 }
