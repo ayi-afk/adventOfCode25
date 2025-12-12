@@ -1,9 +1,8 @@
 module dayN
 
-import util
 
 pub fn solve_a(data string) !string {
-    mut result := answer
+    mut result := "answer"
     return result
 }
 
