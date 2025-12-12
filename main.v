@@ -2,10 +2,12 @@ module main
 
 import time
 import day01
+import day02
 
 type SolverFn = fn (string) !string
 
 const day01_a_embed = $embed_file('day01/day01_A.txt')
+const day02_a_embed = $embed_file('day02/day02_A.txt')
 
 
 struct Solver {
@@ -29,6 +31,18 @@ fn main() {
 			data: day01_a_embed.to_string()
 			solution: "6554"
 		},
+		Solver{
+			name: 'Day 02 '
+			func: day02.solve_a
+			data: day02_a_embed.to_string()
+			solution: "?"
+		},
+		// Solver{
+		// 	name: 'Day 0b B'
+		// 	func: day01.solve_b
+		// 	data: day01_a_embed.to_string()
+		// 	solution: "6554"
+		// },
 	]
 
 	for s in solvers {
