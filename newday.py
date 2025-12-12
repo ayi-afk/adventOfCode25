@@ -1,6 +1,7 @@
 from pathlib import Path
 import shutil
 import re
+import os
 
 DAY_DIR_RE = re.compile(r"^day(\d+)$")
 NUM_WIDTH = 2 # how many digits in filename
@@ -74,7 +75,7 @@ def main() -> None:
 
     rename_files(new_dir, current_number)
     replace_module_name(new_dir, current_number)
-
+    os.system(f"v test {new_dir_name}")
     
 
 
