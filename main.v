@@ -32,17 +32,17 @@ fn main() {
 			solution: "6554"
 		},
 		Solver{
-			name: 'Day 02 '
+			name: 'Day 02 A'
 			func: day02.solve_a
 			data: day02_a_embed.to_string()
-			solution: "?"
+			solution: "31839939622"
 		},
-		// Solver{
-		// 	name: 'Day 0b B'
-		// 	func: day01.solve_b
-		// 	data: day01_a_embed.to_string()
-		// 	solution: "6554"
-		// },
+		Solver{
+			name: 'Day 2 B'
+			func: day02.solve_b
+			data: day02_a_embed.to_string()
+			solution: "41662374059"
+		},
 	]
 
 	for s in solvers {
