@@ -4,12 +4,14 @@ import time
 import day01
 import day02
 import day03
+import day04
 
 type SolverFn = fn (string) !string
 
 const day01_a_embed = $embed_file('day01/day01_A.txt')
 const day02_a_embed = $embed_file('day02/day02_A.txt')
 const day03_a_embed = $embed_file('day03/day03_A.txt')
+const day04_a_embed = $embed_file('day04/day04_A.txt')
 
 
 struct Solver {
@@ -56,6 +58,18 @@ fn main() {
 			func: day03.solve_b
 			data: day03_a_embed.to_string()
 			solution: "173848577117276"
+		},
+		Solver{
+			name: 'Day 04 A'
+			func: day04.solve_a
+			data: day04_a_embed.to_string()
+			solution: "1433"
+		},
+		Solver{
+			name: 'Day 04 B'
+			func: day04.solve_b
+			data: day04_a_embed.to_string()
+			solution: "8616"
 		},
 	]
 

@@ -12,3 +12,7 @@ pub fn read_input_raw(day int, part string) !string {
     path := input_path(day, part)
     return os.read_file(path)!
 }
+
+pub fn prepare(data string) []string {     
+    return data.split('\n').filter(it.len > 0).map(it.trim_right('\r'))
+}
