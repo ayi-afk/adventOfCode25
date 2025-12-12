@@ -1,6 +1,5 @@
 module day02
 
-
 struct Range {
     a u64
     b u64
@@ -46,7 +45,7 @@ pub fn solve_a(data string) !string {
     return sum_ids.str()
 }
 
-@[inline]
+
 fn is_invalid_b(number u64) bool {
     s := number.str()
     if s.len < 2 {    

@@ -38,7 +38,7 @@ fn main() {
 			solution: "31839939622"
 		},
 		Solver{
-			name: 'Day 2 B'
+			name: 'Day 02 B'
 			func: day02.solve_b
 			data: day02_a_embed.to_string()
 			solution: "41662374059"
