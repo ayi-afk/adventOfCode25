@@ -16,3 +16,11 @@ pub fn read_input_raw(day int, part string) !string {
 pub fn prepare(data string) []string {     
     return data.split('\n').filter(it.len > 0).map(it.trim_right('\r'))
 }
+
+pub fn to_grid(data string) [][]u8 {
+    mut grid := [][]u8{}
+    for line in data.split_into_lines() {
+        grid << line.bytes()
+    }
+    return grid
+}
